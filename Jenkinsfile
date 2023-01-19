@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "dockerid/flask_docker:latest"
+    imagename = "heejung8/flask_docker:latest"
     theDockerFile = "Dockerfile"
   }
   
@@ -12,7 +12,7 @@ pipeline {
     stage('Cloning Git') {
       steps {
         //need to change "github repo url" and "credentialsId"(created during configuring Jenkins)
-        git([url: 'https://github.com/{repo_name}/{repo_name}.git', branch: 'main', credentialsId: 'jenkins-gihub-credential'])
+        git([url: 'https://github.com/yoonhee8/pe02.git', branch: 'main', credentialsId: 'jenkins-gihub-ssh'])
       }
     }
       
